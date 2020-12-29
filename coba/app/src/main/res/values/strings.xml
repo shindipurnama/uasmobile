@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">coba</string>
+    <string name="title_activity_pasien__home">Pasien_Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_logout">Log Out</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dokter_home">DokterHomeActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="pilih_poli">Pilih Poli</string>
+    <string name="nama_poli">Nama Poli</string>
+    
+    <string-array name="list_nama_poli">
+        <item>Poli Gigi</item>
+        <item>Poli Mata</item>
+        <item>Poli Umum</item>
+        <item>Poli Kandungan</item>
+        <item>Poli THT</item>
+        <item>Poli Anak</item>
+        <item>Poli Penyakit Dalam</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.coba.ui.pasien_home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home_pasien" />
+
+    <fragment
+        android:id="@+id/nav_profile_pasien"
+        android:name="com.example.coba.ui.pasien_profile.GalleryFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_pasien" />
+
+    <fragment
+        android:id="@+id/nav_daftar_pasien"
+        android:name="com.example.coba.ui.pasien_daftar_antrian.SlideshowFragment"
+        android:label="Daftar Antrian"
+        tools:layout="@layout/fragment_daftar_pasien" />
+
+    <fragment
+        android:id="@+id/nav_jadwal_pemeriksaan"
+        android:name="com.example.coba.ui.pasien_jadwal_pemeriksaan.JadwalPemeriksaanFragment"
+        android:label="Jadwal Pemeriksaan"
+        tools:layout="@layout/fragment_jadwal_pemeriksaan"/>
+
+    <fragment
+        android:id="@+id/nav_riwayat_pemeriksaan"
+        android:name="com.example.coba.ui.pasien_riwayat.PasienRiwayatFragment"
+        android:label="Riwayat Pemeriksaan"
+        tools:layout="@layout/fragment_pasien_riwayat"/>
+</navigation>

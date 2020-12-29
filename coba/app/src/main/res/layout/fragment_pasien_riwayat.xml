@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pasien_riwayat"
+    tools:context=".ui.pasien_riwayat.PasienRiwayatFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:padding="5dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="25dp"
+                android:text="Tanggal"
+                android:textColor="@color/colorAccent"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="25dp"
+                android:text="Poli"
+                android:textColor="@color/colorAccent"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="25dp"
+                android:text="Status"
+                android:textColor="@color/colorAccent"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFD1A9">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="5/10/2020"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Poli Mata"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Selsai"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="10/10/2020"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Poli Gigi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Selesai"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFD1A9">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="12/10/2020"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Poli Mata"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Selsai"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="15/10/2020"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Poli Gigi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="5dp"
+                android:text="Selesai"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"/>
+        </TableRow>
+    </TableLayout>
+</FrameLayout>
