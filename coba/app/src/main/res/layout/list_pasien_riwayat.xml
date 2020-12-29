@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/NAMA_POLI_PASIEN_RIWAYAT"
+        android:text="{NAMA_POLI}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/TANGGAL_PERIKSA_PASIEN_RIWAYAT"
+        android:text="{TANGGAL_PERIKSA}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/WAKTU_PERIKSA_PASIEN_RIWAYAT"
+        android:text="{WAKTU_PERIKSA}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/STATUS_PASIEN_RIWAYAT"
+        android:text="{NO_ANTRIAN}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

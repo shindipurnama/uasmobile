@@ -121,16 +121,16 @@ public class JadwalPemeriksaanFragment extends Fragment {
             return position;
         }
 
-        TextView  ID_POLI, NO_ANTRIAN, TANGGAL_PERIKSA, WAKTU_PERIKSA, STATUS;
+        TextView  NAMA_POLI, NO_ANTRIAN, TANGGAL_PERIKSA, WAKTU_PERIKSA;
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View view=inflater.inflate(R.layout.list_jadwal_pemeriksaan, parent, false);
-            ID_POLI= view.findViewById(R.id.NAMA_POLI);
+            NAMA_POLI= view.findViewById(R.id.NAMA_POLI);
             TANGGAL_PERIKSA= view.findViewById(R.id.TANGGAL_PERIKSA);
             NO_ANTRIAN= view.findViewById(R.id.NO_ANTRIAN);
             WAKTU_PERIKSA= view.findViewById(R.id.WAKTU_PERIKSA);
 
-            ID_POLI.setText(model.get(position).getNAMA_POLI());
+            NAMA_POLI.setText(model.get(position).getNAMA_POLI());
             NO_ANTRIAN.setText(model.get(position).getNO_ANTRIAN());
             TANGGAL_PERIKSA.setText(model.get(position).getTANGGAL_PERIKSA());
             WAKTU_PERIKSA.setText(model.get(position).getWAKTU_PERIKSA());

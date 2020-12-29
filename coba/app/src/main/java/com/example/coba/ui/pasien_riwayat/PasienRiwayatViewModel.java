@@ -5,3 +5,4 @@ import androidx.lifecycle.ViewModel;
 public class PasienRiwayatViewModel extends ViewModel {
     // TODO: Implement the ViewModel
 }
+
