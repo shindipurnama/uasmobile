@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dokter_datar_antrian"
@@ -17,150 +18,16 @@
         android:text="Daftar Antrian"
         android:gravity="center_horizontal" />
 
-    <TableLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <ListView
+        android:id="@+id/listview_dokterListAntrian"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:padding="5dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="25dp"
-                android:text="Nama"
-                android:textColor="@color/colorAccent"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="25dp"
-                android:text="Umur"
-                android:textColor="@color/colorAccent"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="25dp"
-                android:text="Status"
-                android:textColor="@color/colorAccent"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-        </TableRow>
+        android:paddingLeft="50dp"
+        android:paddingTop="175dp"
+        android:paddingBottom="50dp"/>
 
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFD1A9">
-
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Kania"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="17 Tahun"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Waiting"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Handoko"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="20 Tahun"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Waiting"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFD1A9">
-
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Dellisa"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="17 Tahun"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Waiting"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Nur Ella"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="20 Tahun"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:padding="5dp"
-                android:text="Waiting"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-        </TableRow>
-    </TableLayout>
-
-</FrameLayout>
+</LinearLayout>

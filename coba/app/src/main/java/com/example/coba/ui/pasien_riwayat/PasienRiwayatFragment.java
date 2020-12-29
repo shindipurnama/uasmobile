@@ -74,10 +74,10 @@ public class PasienRiwayatFragment extends Fragment {
                                 String TANGGAL_PERIKSA=getData.getString("TANGGAL_PERIKSA");
                                 String WAKTU_PERIKSA=getData.getString("WAKTU_PERIKSA");
                                 String STATUS=getData.getString("STATUS");
-                                // line code 78 ini kalau udh bisa nampil NO ANTRIAN Berarti bener.
+                                // line code 78 ini kalau udh bisa nampil TANGGAL_PERIKSA Berarti bener.
                                 // kalau sudah code  78 di comment trs uncomment line 60,80,82,83
                                 Toast.makeText(getActivity().getApplicationContext(), TANGGAL_PERIKSA, Toast.LENGTH_LONG).show();
-                                //list.add(new dataObject(NAMA_POLI,NO_ANTRIAN,TANGGAL_PERIKSA,WAKTU_PERIKSA));
+                                //list.add(new dataObject_pasienRiwayat(NAMA_POLI,TANGGAL_PERIKSA,"WAKTU_PERIKSA","STATUS"));
                             }
                             //Adapter adapter=new Adapter(PasienRiwayatFragment.this, list);
                             //listView.setAdapter(adapter);

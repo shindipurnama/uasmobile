@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/NO_ANTRIAN_DOKTER_LIST_ANTRIAN"
+        android:text="{NO_ANTRIAN}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/NAMA_PASIEN_DOKTER_LIST_ANTRIAN"
+        android:text="{NAMA_PASIEN}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/WAKTU_PERIKSA_DOKTER_LIST_ANTRIAN"
+        android:text="{WAKTU_PERIKSA}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/STATUS_DOKTER_LIST_ANTRIAN"
+        android:text="{STATUS}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
