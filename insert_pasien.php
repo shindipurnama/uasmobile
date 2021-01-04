@@ -5,6 +5,12 @@
     $EMAIL_PASIEN = $_POST['EMAIL_PASIEN'];
     $PASSWORD_PASIEN = $_POST['PASSWORD_PASIEN'];
 	
+	$id="";
+	$result = mysqli_query($con,"SELECT COUNT(*) FROM pasien");
+	$row = mysqli_fetch_row($result);
+	$id = $row[0];
+	$id = $id+1;
+
 	class emp{}
 	
 	if (empty($NAMA) || empty($EMAIL_PASIEN) || empty($PASSWORD_PASIEN)) { 
@@ -13,7 +19,7 @@
 		$response->message = "Kolom isian tidak boleh kosong"; 
 		die(json_encode($response));
 	} else {
-		$query = mysqli_query($con,"INSERT INTO pasien (ID_PASIEN,NAMA,EMAIL_PASIEN,PASSWORD_PASIEN) VALUES(3,'".$NAMA."','".$EMAIL_PASIEN."','".$PASSWORD_PASIEN."')");
+		$query = mysqli_query($con,"INSERT INTO pasien (ID_PASIEN,NAMA,EMAIL_PASIEN,PASSWORD_PASIEN) VALUES('".$id."','".$NAMA."','".$EMAIL_PASIEN."','".$PASSWORD_PASIEN."')");
 		
 		if ($query) {
 			$response = new emp();

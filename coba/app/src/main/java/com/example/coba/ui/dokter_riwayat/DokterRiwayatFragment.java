@@ -58,8 +58,8 @@ public class DokterRiwayatFragment extends Fragment {
 
 
     void dokterRiwayat(){
-        //list=new ArrayList<>();
-        String url=""; //url backend php
+        list=new ArrayList<>();
+        String url="http://192.168.56.1/uasmobile/tampil_riwayat_dokter.php"; //url backend php
         StringRequest request=new StringRequest(Request.Method.POST,
                 url,
                 new Response.Listener<String>() {
@@ -68,7 +68,7 @@ public class DokterRiwayatFragment extends Fragment {
                         try {
                             JSONObject jsonObject= new JSONObject(response);
                             JSONArray jsonArray =jsonObject.getJSONArray("data");
-                            for (int i=0;1<jsonArray.length(); i++)
+                            for (int i=0;i<jsonArray.length(); i++)
                             {
                                 JSONObject getData=jsonArray.getJSONObject(i);
                                 String NAMA_PASIEN=getData.getString("NAMA_PASIEN");
@@ -76,11 +76,11 @@ public class DokterRiwayatFragment extends Fragment {
                                 String JAM_KELUAR=getData.getString("JAM_KELUAR");
                                 // line code 79 ini kalau udh bisa nampil JAM_KELUAR Berarti bener.
                                 // kalau sudah code  79 di comment trs uncomment line 60,80,82,83
-                                Toast.makeText(getActivity().getApplicationContext(), JAM_KELUAR, Toast.LENGTH_LONG).show();
-                                //list.add(new dataObject_dokterRiwayat("NAMA_PASIEN","JAM_MASUK","JAM_KELUAR"));
+                                //Toast.makeText(getActivity().getApplicationContext(), JAM_KELUAR, Toast.LENGTH_LONG).show();
+                                list.add(new dataObject_dokterRiwayat(NAMA_PASIEN,JAM_MASUK,JAM_KELUAR));
                             }
-                            //Adapter adapter=new Adapter(dataObject_dokterRiwayat.this, list);
-                            //listView.setAdapter(adapter);
+                            Adapter adapter=new Adapter(getActivity(), list);
+                            listView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -127,8 +127,8 @@ public class DokterRiwayatFragment extends Fragment {
         public View getView(int position, View convertView, ViewGroup parent) {
             View view=inflater.inflate(R.layout.list_dokter_riwayat, parent, false);
             NAMA_PASIEN= view.findViewById(R.id.NAMA_PASIEN_DOKTER_RIWAYAT);
-            JAM_MASUK= view.findViewById(R.id.NO_ANTRIAN_DOKTER_LIST_ANTRIAN);
-            JAM_KELUAR= view.findViewById(R.id.WAKTU_PERIKSA_DOKTER_LIST_ANTRIAN);
+            JAM_MASUK= view.findViewById(R.id.JAM_MASUK_DOKTER_RIWAYAT);
+            JAM_KELUAR= view.findViewById(R.id.JAM_KELUAR_DOKTER_RIWAYAT);
 
             NAMA_PASIEN.setText(model.get(position).getNAMA_PASIEN());
             JAM_MASUK.setText(model.get(position).getJAM_MASUK());

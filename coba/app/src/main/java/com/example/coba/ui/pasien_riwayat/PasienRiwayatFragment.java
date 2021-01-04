@@ -57,8 +57,8 @@ public class PasienRiwayatFragment extends Fragment {
     }
 
     void pasienRiwayat(){
-        //list=new ArrayList<>();
-        String url=""; //url backend php
+        list=new ArrayList<>();
+        String url="http://192.168.56.1/uasmobile/tampil_riwayat_pasien.php"; //url backend php
         StringRequest request=new StringRequest(Request.Method.POST,
                 url,
                 new Response.Listener<String>() {
@@ -67,7 +67,7 @@ public class PasienRiwayatFragment extends Fragment {
                         try {
                             JSONObject jsonObject= new JSONObject(response);
                             JSONArray jsonArray =jsonObject.getJSONArray("data");
-                            for (int i=0;1<jsonArray.length(); i++)
+                            for (int i=0;i<jsonArray.length(); i++)
                             {
                                 JSONObject getData=jsonArray.getJSONObject(i);
                                 String NAMA_POLI=getData.getString("NAMA_POLI");
@@ -76,11 +76,11 @@ public class PasienRiwayatFragment extends Fragment {
                                 String STATUS=getData.getString("STATUS");
                                 // line code 78 ini kalau udh bisa nampil TANGGAL_PERIKSA Berarti bener.
                                 // kalau sudah code  78 di comment trs uncomment line 60,80,82,83
-                                Toast.makeText(getActivity().getApplicationContext(), TANGGAL_PERIKSA, Toast.LENGTH_LONG).show();
-                                //list.add(new dataObject_pasienRiwayat(NAMA_POLI,TANGGAL_PERIKSA,"WAKTU_PERIKSA","STATUS"));
+                                //Toast.makeText(getActivity().getApplicationContext(), TANGGAL_PERIKSA, Toast.LENGTH_LONG).show();
+                                list.add(new dataObject_pasienRiwayat(NAMA_POLI,TANGGAL_PERIKSA,WAKTU_PERIKSA,STATUS));
                             }
-                            //Adapter adapter=new Adapter(PasienRiwayatFragment.this, list);
-                            //listView.setAdapter(adapter);
+                            Adapter adapter=new Adapter(getActivity(), list);
+                            listView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -125,7 +125,7 @@ public class PasienRiwayatFragment extends Fragment {
         TextView NAMA_POLI, TANGGAL_PERIKSA, WAKTU_PERIKSA, STATUS;
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view=inflater.inflate(R.layout.list_jadwal_pemeriksaan, parent, false);
+            View view=inflater.inflate(R.layout.list_pasien_riwayat, parent, false);
             NAMA_POLI= view.findViewById(R.id.NAMA_POLI_PASIEN_RIWAYAT);
             TANGGAL_PERIKSA= view.findViewById(R.id.TANGGAL_PERIKSA_PASIEN_RIWAYAT);
             WAKTU_PERIKSA= view.findViewById(R.id.WAKTU_PERIKSA_PASIEN_RIWAYAT);

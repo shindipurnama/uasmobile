@@ -53,8 +53,8 @@ public class SlideshowFragment extends Fragment {
     Button bt_TANGGAL_PERIKSA;
     Button buttonDaftarAntrian;
     //Declaring an Spinner
-    private Spinner spinner;
-    private Spinner spinner2;
+    private Spinner spinner; //poli
+    private Spinner spinner2; //waktu
 
     //An ArrayList for Spinner Items
     private ArrayList<String> poli;
@@ -230,7 +230,7 @@ public class SlideshowFragment extends Fragment {
     }
 
     void SlideshowFragment(){
-        String url="";
+        String url="http://192.168.56.1/uasmobile/insert_antrian.php";
         StringRequest respon=new StringRequest(
                 Request.Method.POST,
                 url,
@@ -243,7 +243,7 @@ public class SlideshowFragment extends Fragment {
                             if (status.equals("oke")){
                                 AlertDialog.Builder builder= new AlertDialog.Builder(getActivity());
                                 builder.setTitle("Success");
-                                builder.setMessage("You're already register");
+                                builder.setMessage("Antrian Anda Telah Terdaftarkan");
                                 builder.setPositiveButton("Oke",
                                         new DialogInterface.OnClickListener() {
                                             @Override
@@ -269,9 +269,9 @@ public class SlideshowFragment extends Fragment {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> form=new HashMap<>();
-                form.put("NAMA_POLI", spinner.getAdapter().toString());
+                form.put("NAMA_POLI", spinner.getSelectedItem().toString());
                 form.put("TANGGAL_PERIKSA", TANGGAL_PERIKSA.getText().toString());
-                form.put("JAM_PERIKSA", spinner2.getAdapter().toString());
+                form.put("WAKTU_PERIKSA", spinner2.getSelectedItem().toString());
                 return form;
             }
         };

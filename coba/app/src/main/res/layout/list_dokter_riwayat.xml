@@ -7,16 +7,19 @@
     <TextView
         android:id="@+id/NAMA_PASIEN_DOKTER_RIWAYAT"
         android:text="{NAMA_PASIEN}"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/JAM_MASUK_DOKTER_RIWAYAT"
         android:text="{JAM_MASUK}"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/JAM_KELUAR_DOKTER_RIWAYAT"
         android:text="{JAM_KELUAR}"
+        android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

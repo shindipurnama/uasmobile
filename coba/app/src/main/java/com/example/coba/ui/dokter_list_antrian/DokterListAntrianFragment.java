@@ -57,8 +57,8 @@ public class DokterListAntrianFragment extends Fragment {
     }
 
     void dokterListAntrian(){
-        //list=new ArrayList<>();
-        String url=""; //url backend php
+        list=new ArrayList<>();
+        String url="http://192.168.56.1/uasmobile/tampil_list_antrian.php"; //url backend php
         StringRequest request=new StringRequest(Request.Method.POST,
                 url,
                 new Response.Listener<String>() {
@@ -67,7 +67,7 @@ public class DokterListAntrianFragment extends Fragment {
                         try {
                             JSONObject jsonObject= new JSONObject(response);
                             JSONArray jsonArray =jsonObject.getJSONArray("data");
-                            for (int i=0;1<jsonArray.length(); i++)
+                            for (int i=0;i<jsonArray.length(); i++)
                             {
                                 JSONObject getData=jsonArray.getJSONObject(i);
                                 String NAMA_PASIEN=getData.getString("NAMA_PASIEN");
@@ -76,11 +76,11 @@ public class DokterListAntrianFragment extends Fragment {
                                 String STATUS=getData.getString("STATUS");
                                 // line code 79 ini kalau udh bisa nampil NO ANTRIAN Berarti bener.
                                 // kalau sudah code  79 di comment trs uncomment line 60,80,82,83
-                                Toast.makeText(getActivity().getApplicationContext(), NO_ANTRIAN, Toast.LENGTH_LONG).show();
-                                //list.add(new dataObject_dokterListAntrian(NAMA_PASIEN,NO_ANTRIAN,WAKTU_PERIKSA,STATUS));
+                                //Toast.makeText(getActivity().getApplicationContext(), NO_ANTRIAN, Toast.LENGTH_LONG).show();
+                                list.add(new dataObject_dokterListAntrian(NAMA_PASIEN,NO_ANTRIAN,WAKTU_PERIKSA,STATUS));
                             }
-                            //Adapter adapter=new Adapter(DokterListAntrianFragment.this, list);
-                            //listView.setAdapter(adapter);
+                            Adapter adapter=new Adapter(getActivity(), list);
+                            listView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
